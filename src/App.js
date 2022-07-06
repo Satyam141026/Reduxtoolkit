@@ -13,7 +13,7 @@ function App() {
    let dispatch=useDispatch() 
    
   useEffect(()=>{
-    dispatch(apiCall())
+    dispatch(apiCall(1))
   
   })
    function changeName(){
@@ -24,10 +24,11 @@ function App() {
   
     return (
       <div className="App">
-   {show.rootReducer.value}
+   {show.rootReducer.value}<hr></hr>
+   {show.rootReducer.userList}
   <button onClick={changeName}>changeName</button> 
   
-  
+
       </div>
     );
   
